@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Editar Tarefa{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Editar Tarefa</h2>
+
+    {% if error %}
+    <div class="alert alert-danger">
+        {{ error }}
+    </div>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="tarefa" class="form-label">Tarefa</label>
+            <input type="text" class="form-control" id="tarefa" name="tarefa" value="{{ tarefa.tarefa }}">
+        </div>
+        <div class="mb-3">
+            <label for="horario_inicio" class="form-label">Horário Início</label>
+            <input type="time" class="form-control" id="horario_inicio" name="horario_inicio" value="{{ tarefa.horario_inicio }}">
+        </div>
+        <div class="mb-3">
+            <label for="horario_fim" class="form-label">Horário Fim</label>
+            <input type="time" class="form-control" id="horario_fim" name="horario_fim" value="{{ tarefa.horario_fim }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+</div>
+{% endblock %}
+

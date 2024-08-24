@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Registro{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Registrar</h2>
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!-- Bloco para exibir erros de validação -->
+        {% if form.errors %}
+            <div class="alert alert-danger">
+                <ul>
+                    {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                            <li>{{ field }}: {{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+    <p>Já tem uma conta? <a href="{% url 'login' %}">Faça login</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Garanta que o footer fique no rodapé */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* O main vai ocupar o espaço restante */
+main {
+    flex: 1;
+}
+
+body {
+    background-color: #121212; /* Cor de fundo escura */
+    color: #ffffff; /* Cor do texto */
+}
+
+header, footer {
+    background-color: #000000; /* Cor de fundo do cabeçalho e rodapé */
+    color: #ffffff; /* Cor do texto no cabeçalho e rodapé */
+}
+
+a {
+    color: #ffffff; /* Cor dos links */
+}
+
+/* styles.css */
+
+/* Estilo para a tabela */
+table.table-striped {
+    width: 100%;
+    border-collapse: collapse;
+    color: #f8f9fa; /* Cor clara para o texto */
+}
+
+/* Estilo para as células da tabela */
+table.table-striped th, table.table-striped td {
+    padding: 8px;
+    border: none; /* Remove a borda */
+}
+
+/* Estilo para o cabeçalho da tabela */
+table.table-striped th {
+    background-color: #343a40; /* Fundo escuro para o cabeçalho */
+    color: #f8f9fa; /* Cor clara para o texto do cabeçalho */
+}
+
+/* Estilo para as linhas da tabela */
+table.table-striped tr:nth-child(odd) {
+    background-color: #f0f0f0; /* Cinza claro para linhas ímpares */
+    color: #212529; /* Cor escura para o texto das linhas ímpares */
+}
+
+table.table-striped tr:nth-child(even) {
+    background-color: #e0e0e0; /* Cinza escuro para linhas pares */
+    color: #212529; /* Cor escura para o texto das linhas pares */
+}
+
+/* Estilo para as linhas ao passar o mouse */
+table.table-striped tr:hover {
+    background-color: #d0d0d0; /* Cinza médio ao passar o mouse */
+}
+
+/* Estilo para o botão sair */
+.btn-light {
+    background-color: #f8f9fa;
+    color: #212529;
+}
