@@ -6,9 +6,9 @@ Este projeto é uma aplicação Django para gerenciamento de tarefas. Permite qu
 
 1. Clone o repositório:
    ```bash
-   git clone <[URL do repositório](https://github.com/renanjatczak/agenda_semanal)>
+git clone https://github.com/renanjatczak/agenda_semanal
 
-   # Navegue até o diretório do projeto:
+# Navegue até o diretório do projeto:
 cd agenda_semanal
 
 # Crie e ative um ambiente virtual:
